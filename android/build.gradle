@@ -39,7 +39,7 @@ publishing {
       groupId = "com.arthenica"
       artifactId = "ffmpeg-kit"
       version = "6.0-3"
-      from components.java
+      // from components.java
     }
   }
 }
