@@ -54,6 +54,8 @@ jobs:
         env:
           MAVEN_NAME: ${{ secrets.MAVEN_NAME }}
           MAVEN_SECRET: ${{ secrets.MAVEN_SECRET}}
+          ORG_GRADLE_PROJECT_reposiliteRepositoryUsername: ${{ secrets.MAVEN_NAME }}
+          ORG_GRADLE_PROJECT_reposiliteRepositoryPassword: ${{ secrets.MAVEN_SECRET}}
       - name: print build logs
         if: ${{ always() }}
         run: cat build.log
