@@ -27,7 +27,7 @@ publishing {
   repositories {
     maven {
       name = "reposiliteRepository"
-      url = "https://reposilite.dashboards.steller.co/ffmpeg-kit"
+      url = "https://reposilite.dashboards.steller.co/releases"
       credentials(PasswordCredentials)
       authentication {
         basic(BasicAuthentication)
