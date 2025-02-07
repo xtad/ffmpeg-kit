@@ -9,7 +9,7 @@ buildscript {
 }
 
 plugins {
-  id("maven-publish")
+  id 'maven-publish'
 }
 
 allprojects {
@@ -23,24 +23,23 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
-
 publishing {
   repositories {
     maven {
       name = "reposiliteRepository"
-      url = uri("https://reposilite.dashboards.steller.co/ffmpeg-kit")
-      credentials(PasswordCredentials::class)
+      url = "https://reposilite.dashboards.steller.co/ffmpeg-kit"
+      credentials(PasswordCredentials)
       authentication {
-        create<BasicAuthentication>("basic")
+        basic(BasicAuthentication)
       }
     }
   }
   publications {
-    create<MavenPublication>("maven") {
+    maven(MavenPublication) {
       groupId = "com.arthenica"
       artifactId = "ffmpeg-kit"
       version = "6.0-3"
-      from(components["java"])
+      from components.java
     }
   }
 }
