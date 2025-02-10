@@ -56,6 +56,10 @@ jobs:
           MAVEN_SECRET: ${{ secrets.MAVEN_SECRET}}
           ORG_GRADLE_PROJECT_reposiliteRepositoryUsername: ${{ secrets.MAVEN_NAME }}
           ORG_GRADLE_PROJECT_reposiliteRepositoryPassword: ${{ secrets.MAVEN_SECRET}}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ffmpeg-kit
+          path: ${{ github.workspace }}/android/ffmpeg-kit-android-lib/build/outputs/aar/ffmpeg-kit-release.aar
       - name: print build logs
         if: ${{ always() }}
         run: cat build.log
