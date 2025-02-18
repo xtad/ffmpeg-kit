@@ -36,9 +36,9 @@ publishing {
   }
   publications {
     maven(MavenPublication) {
-      groupId = "com.nextap"
-      artifactId = "ffmpeg-kit"
-      version = "6.0-4"
+      groupId = "com.arthenica"
+      artifactId = "ffmpegkit"
+      version = "6.0-5"
       // from components.java
     }
   }
