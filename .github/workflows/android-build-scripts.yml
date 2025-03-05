@@ -28,7 +28,7 @@ on:
 jobs:
   build-main-on-linux:
     name: android main on linux
-    runs-on: ubuntu-22.04
+    runs-on: large-runner-8c
     strategy:
       matrix:
         ndk-version: [ 'r27c-linux' ]
@@ -50,7 +50,7 @@ jobs:
           unzip -q -o ndk.zip -d .ndk
           echo "ANDROID_NDK_ROOT=$PWD/.ndk/$(ls .ndk)" >> $GITHUB_ENV
       - name: run the build script
-        run: ./android.sh -d --enable-android-media-codec --enable-android-zlib --disable-arm-v7a --enable-gpl --enable-gmp --enable-gnutls --enable-libvidstab --enable-x264 --enable-x265 --enable-xvidcore --version-6.0-5
+        run: ./android.sh -d --enable-android-media-codec --enable-android-zlib --disable-arm-v7a --enable-gpl --full --version-6.0-5
         env:
           MAVEN_NAME: ${{ secrets.MAVEN_NAME }}
           MAVEN_SECRET: ${{ secrets.MAVEN_SECRET}}
