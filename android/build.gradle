@@ -37,7 +37,7 @@ publishing {
   publications {
     maven(MavenPublication) {
       groupId = "com.arthenica"
-      artifactId = "ffmpegkit"
+      artifactId = "ffmpeg-kit-https-gpl"
       version = "6.0-5"
       // from components.java
     }
