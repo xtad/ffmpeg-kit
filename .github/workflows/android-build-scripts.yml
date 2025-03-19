@@ -31,7 +31,7 @@ jobs:
     runs-on: large-runner-8c
     strategy:
       matrix:
-        ndk-version: [ 'r25b-linux' ]
+        ndk-version: [ 'r28-linux' ]
     defaults:
       run:
         shell: bash
