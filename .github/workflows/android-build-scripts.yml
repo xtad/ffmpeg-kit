@@ -55,7 +55,7 @@ jobs:
           echo "ANDROID_NDK_ROOT=$PWD/.ndk/$(ls .ndk)" >> $GITHUB_ENV
       - name: run the build script
         continue-on-error: true
-        run: ./android.sh --enable-android-media-codec --enable-android-zlib --disable-arm-v7a --enable-gpl --enable-gmp --enable-libvidstab --enable-x264 --enable-x265 --enable-xvidcore --version-6.0-6 --enable-openssl
+        run: ./android.sh --enable-android-media-codec --enable-android-zlib --disable-arm-v7a --enable-gpl --enable-gmp --enable-libvidstab --enable-x264 --enable-x265 --enable-xvidcore --version-6.0-6 --enable-openssl --disable-x86
         env:
           MAVEN_NAME: ${{ secrets.MAVEN_NAME }}
           MAVEN_SECRET: ${{ secrets.MAVEN_SECRET}}
